@@ -1,9 +1,10 @@
 {
-  "name": "react-map",
+  "name": "react-map-webpack",
   "version": "1.0.0",
   "description": "webpack-project starter",
   "main": "index.js",
   "scripts": {
+    "start": "webpack",
     "dev": "webpack -d --watch"
   },
   "repository": {
@@ -13,13 +14,20 @@
   "author": "maura rodriguez",
   "license": "ISC",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
     "webpack": "^4.16.0",
     "webpack-cli": "^3.0.8"
   },
-  "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
-  }
+  "dependencies": {}
 }

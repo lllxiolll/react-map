@@ -6,12 +6,31 @@ module.exports = {
         path: __dirname + '/dist',
         filename: 'app.bundle..js'
     },
+    module: {
+        rules: 
+        [
+            { 
+              test: /\.scss$/, 
+              use: [
+                  {loader: 'style-loader'},
+                  {
+                      loader: 'css-loader',
+                      options: {
+                          modules: true
+                      }
+                },
+                {loader: 'sass-loader'}
+            ]
+            },
+            { 
+                test: /\.js$/,
+                exclude : /node_modules/,
+                use: 'babel-loader'
+            }
+        ]},
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Test demo',
-            minify: {
-                collapseWhitespace: true
-            },
+            title: 'Demo test',
             template: './src/index.html'
           })
     ]
